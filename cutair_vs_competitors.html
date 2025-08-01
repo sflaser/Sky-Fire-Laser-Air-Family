@@ -181,6 +181,23 @@
             padding: 20px;
             margin: 20px 0;
         }
+        .product-image {
+            width: 120px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            transition: transform 0.3s ease;
+        }
+        .product-image:hover {
+            transform: scale(1.05);
+            border-color: #ff8c00;
+        }
+        .product-image-cell {
+            text-align: center;
+            padding: 15px 10px !important;
+            vertical-align: middle;
+        }
         
         @media (max-width: 768px) {
             .header h1 {
@@ -201,6 +218,13 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+            }
+            .product-image {
+                width: 80px;
+                height: 60px;
+            }
+            .product-image-cell {
+                padding: 10px 5px !important;
             }
         }
     </style>
@@ -328,6 +352,23 @@
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td><strong>产品图片</strong></td>
+                    <td class="cutair-highlight product-image-cell">
+                        <div style="background: linear-gradient(135deg, #ff8c00, #ffa500); color: white; padding: 20px; border-radius: 8px; font-weight: bold; text-align: center;">
+                            SkyFire<br>Air Family<br><small style="opacity: 0.8;">(即将发布)</small>
+                        </div>
+                    </td>
+                    <td class="product-image-cell">
+                        <img src="images/xTool MetalFab.png" alt="xTool MetalFab" class="product-image" title="xTool MetalFab - 1200W激光焊接+CNC Cutter">
+                    </td>
+                    <td class="product-image-cell">
+                        <img src="images/Gweike M Series.png" alt="Gweike M Series" class="product-image" title="Gweike M Series - 工业级六合一系统">
+                    </td>
+                    <td class="product-image-cell">
+                        <img src="images/HeroLaser E700_.png" alt="HeroLaser E700" class="product-image" title="HeroLaser E700 - 台式电脑大小套装">
+                    </td>
+                </tr>
                 <tr>
                     <td><strong>产品类型</strong></td>
                     <td class="cutair-highlight">专机专用三件套（切割+焊接清洗+打标）</td>
