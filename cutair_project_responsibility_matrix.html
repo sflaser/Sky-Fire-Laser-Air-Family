@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutAir 2周预售 + Workshop 全量产出物责任清单</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #ff8c00, #ffa500);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .responsibility-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background: #ff8c00;
+            color: white;
+            padding: 15px 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+            font-size: 13px;
+        }
+        .person-name {
+            background: #f8f9fa;
+            font-weight: bold;
+            color: #ff8c00;
+            width: 140px;
+            position: sticky;
+            left: 0;
+            z-index: 10;
+        }
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .task-list li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+        }
+        .task-checkbox {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        .task-checkbox:checked + .task-content {
+            text-decoration: line-through;
+            opacity: 0.6;
+            color: #888;
+        }
+        .task-content {
+            flex: 1;
+        }
+        .day-tag {
+            background: #ff8c00;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        .usage-section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .usage-section h3 {
+            color: #ff8c00;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        .usage-list {
+            list-style: none;
+            padding: 0;
+        }
+        .usage-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .usage-list li::before {
+            content: "→";
+            color: #ff8c00;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .workflow {
+            background: #f0f8ff;
+            border-left: 4px solid #ff8c00;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight {
+            background: #fff3e0;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        .standout {
+            background: #fff8e1;
+            border-left: 4px solid #ff8c00;
+        }
+
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 22px;
+            }
+            th, td {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+            .person-name {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CutAir 预售推广 + Workshop 全量产出物责任清单</h1>
+        <p>项目推广营销活动完整责任矩阵 | 各部门协同作战指南</p>
+    </div>
+
+    <div class="table-container">
+        <div class="responsibility-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>负责人</th>
+                        <th>必做图片/视觉</th>
+                        <th>必做视频</th>
+                        <th>必做博客/长文/文案</th>
+                        <th>其他资料 & 支撑</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="person-name">Mia<br>设计师＋视频剪辑</td>
+                        <td>
+                            <ul class="task-list">
+                                <li><input type="checkbox" class="task-checkbox" id="mia-1"><span class="task-content">VI 手册模板（品牌视觉识别规范文档） <span class="day-tag">7月22-24日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-2"><span class="task-content">悬念预告封面 & 官网页头横幅 <span class="day-tag">7月25日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-3"><span class="task-content">Raycus激光器测试结果长图 <span class="day-tag">7月28日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-4"><span class="task-content">用户访谈轮播多图 <span class="day-tag">8月1日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-5"><span class="task-content">四宫格竞品对比图 + 条形数据图 <span class="day-tag">8月4日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-6"><span class="task-content">问答&直播预告主视觉 <span class="day-tag">8月6日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-7"><span class="task-content">一周回顾长图 Banner <span class="day-tag">8月8日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-8"><span class="task-content">48h/24h 倒计时海报 + Story 模板 <span class="day-tag">8月18-19日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-9"><span class="task-content">发布当日战报模板 <span class="day-tag">8月20日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-10"><span class="task-content">Workshop 入口招牌、三机背板、走线贴、灯箱对比图 <span class="day-tag">8月10-12日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-11"><span class="task-content">互动区二维码海报、贴纸/钥匙扣图稿 <span class="day-tag">8月13日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-12"><span class="task-content">Plug&Play / 切割路径 GIF <span class="day-tag">7月30日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-13"><span class="task-content">包装盒3D渲染图 + 延展目标周边T恤/贴纸设计 <span class="day-tag">8月15-17日</span></span></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="task-list">
+                                <li><span class="task-content"><strong>≤1 min 社媒短片剪辑：</strong></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-v1"><span class="task-content">15s 悬念预告片 <span class="day-tag">7月26日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-v2"><span class="task-content">1min Raycus激光器性能+连续工作亮点 <span class="day-tag">7月29日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-v3"><span class="task-content">30s 快装延时摄影 <span class="day-tag">8月9日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-v4"><span class="task-content">15s~20s 倒计时短片 <span class="day-tag">8月19日</span></span></li>
+                                <li><span class="task-content"><strong>中等长度剪辑（从周先生转移）：</strong></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-v5"><span class="task-content">2min 操作演示正式版 <span class="day-tag">7月31日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-v6"><span class="task-content">3min 用户访谈 <span class="day-tag">8月2日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-v7"><span class="task-content">45s Workshop 预告片 <span class="day-tag">8月14日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="mia-v8"><span class="task-content">30-60s Workshop Day 1 高光 <span class="day-tag">8月22日</span></span></li>
+                            </ul>
+                        </td>
+                        <td>–</td>
+                        <td>
+                            <ul class="task-list">
+                                <li><input type="checkbox" class="task-checkbox" id="mia-final"><span class="task-content">设计文件整理并交付给 Jay 和晓东上线 <span class="day-tag">8月20日</span></span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Jay<br>摄影 + 网站 & FB 运营</td>
+                        <td>
+                            <ul class="task-list">
+                                <li><input type="checkbox" class="task-checkbox" id="jay-1"><span class="task-content">产品高清图（四视图 + 场景图） <span class="day-tag">7月22-25日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-2"><span class="task-content">Workshop 现场环拍照片（每日更新） <span class="day-tag">8月21-30日</span></span></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="task-list">
+                                <li><span class="task-content"><strong>原始拍摄 + 现场连线：</strong></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-v1"><span class="task-content">预告片素材拍摄 <span class="day-tag">7月25日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-v2"><span class="task-content">多品牌激光器对比测试镜头 <span class="day-tag">7月27日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-v3"><span class="task-content">操作全过程 <span class="day-tag">7月30日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-v4"><span class="task-content">用户访谈原片 <span class="day-tag">8月1日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-v5"><span class="task-content">Raycus工程师专访原片 <span class="day-tag">8月5日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-v6"><span class="task-content">实验室性能测试 <span class="day-tag">8月7日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-v7"><span class="task-content">快装延时 & 录屏 <span class="day-tag">8月8日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-v8"><span class="task-content">Workshop 预告片素材拍摄 <span class="day-tag">8月13日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-v9"><span class="task-content">Workshop 每日高光原片 <span class="day-tag">8月21-30日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-v10"><span class="task-content">连续工作稳定性直播录制 <span class="day-tag">8月21日</span></span></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="task-list">
+                                <li><span class="task-content"><strong>负责将以下文案排版上线：</strong></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-c1"><span class="task-content">Raycus激光器测试报告 <span class="day-tag">7月29日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-c2"><span class="task-content">多品牌激光器对比报告 <span class="day-tag">8月5日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-c3"><span class="task-content">性能数据帖 <span class="day-tag">8月8日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-c4"><span class="task-content">快速上手指南 <span class="day-tag">8月10日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-c5"><span class="task-content">Kickstarter FAQ 页 <span class="day-tag">8月15日</span></span></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="task-list">
+                                <li><input type="checkbox" class="task-checkbox" id="jay-w1"><span class="task-content">alleriastore.com 主网站倒计时&弹窗 <span class="day-tag">8月16-18日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-w2"><span class="task-content">small-laser.com 风冷激光器专门网站建设 <span class="day-tag">7月26-8月5日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-w3"><span class="task-content">Kickstarter 预告页 / 预约页 <span class="day-tag">8月12-15日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="jay-w4"><span class="task-content">脸书/Instagram 贴文发布 & 广告受众设置 / A/B测试 / 再营销 <span class="day-tag">7月25-8月20日</span></span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">周先生<br>外协剪辑（精简任务）</td>
+                        <td>–</td>
+                        <td>
+                            <ul class="task-list">
+                                <li><span class="task-content"><strong>核心长片剪辑（保留）：</strong></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="zhou-1"><span class="task-content">2-3min 产品概念主宣片（Kickstarter 主页用） <span class="day-tag">8月11-14日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="zhou-2"><span class="task-content">5min Raycus工程师专访 <span class="day-tag">8月6-8日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="zhou-3"><span class="task-content">3min 实验室性能片 <span class="day-tag">8月9-11日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="zhou-4"><span class="task-content">MarkAir / WeldAir 功能深度片各 2-3min（Workshop 后期） <span class="day-tag">8月25-30日</span></span></li>
+                                <li><span class="task-content"><strong>备注：</strong>部分中等长度视频已转移给Mia处理，减少沟通成本</span></li>
+                            </ul>
+                        </td>
+                        <td>–</td>
+                        <td>
+                            <ul class="task-list">
+                                <li><input type="checkbox" class="task-checkbox" id="zhou-other1"><span class="task-content">所有片头片尾统一模板</span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="zhou-other2"><span class="task-content">字幕中/英双语</span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="zhou-other3"><span class="task-content">输出 4K + 1080P 两版</span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="standout">
+                        <td class="person-name">晓东<br>Manager / 内容总策</td>
+                        <td>–</td>
+                        <td>
+                            <ul class="task-list">
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-v1"><span class="task-content">编写旁白脚本 + 直播主持</span></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="task-list">
+                                <li><span class="task-content"><strong>1. 全部长文 / 博客：</strong></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-1"><span class="task-content">《我们为什么选择Raycus》技术深度文 <span class="day-tag">7月28日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-2"><span class="task-content">操作教程帖 <span class="day-tag">7月30日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-3"><span class="task-content">多品牌激光器横向对比报告 <span class="day-tag">8月4日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-4"><span class="task-content">性能数据帖 <span class="day-tag">8月7日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-5"><span class="task-content">快速上手指南 <span class="day-tag">8月9日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-6"><span class="task-content">每周回顾 & 邮件 <span class="day-tag">8月8日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-7"><span class="task-content">创始人公开信 <span class="day-tag">8月18日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-8"><span class="task-content"><strong>2. 问答环节常见问题、直播问答提纲</strong> <span class="day-tag">8月3-6日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-9"><span class="task-content"><strong>3. 全渠道广告文案 & 行动召唤</strong> <span class="day-tag">7月24-26日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-10"><span class="task-content"><strong>4. Workshop 三机 Demo 流程脚本 + 安全操作规程</strong> <span class="day-tag">8月12-15日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-11"><span class="task-content"><strong>5. Raycus工程师专访问题清单 + 连续工作直播脚本</strong> <span class="day-tag">8月3-5日</span></span></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="task-list">
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-other1"><span class="task-content">预算审批 & 供应商合同 <span class="day-tag">7月22-24日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-other2"><span class="task-content">种子用户社群/微信群运营 <span class="day-tag">7月25-8月30日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-other3"><span class="task-content">关键指标复盘 & 紧急策略调整 <span class="day-tag">每周五</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-other4"><span class="task-content">媒体通稿 & 本地媒体联络 <span class="day-tag">8月10-20日</span></span></li>
+                                <li><input type="checkbox" class="task-checkbox" id="xiaodong-other5"><span class="task-content">危机公关预案与统一口径 <span class="day-tag">7月23-25日</span></span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="usage-section">
+        <h3>额外激励机制</h3>
+        <p><strong>说明：</strong>以下激励为各任务完成基础奖励之外的额外奖励，旨在鼓励超预期表现和创新贡献。</p>
+        
+                 <div class="workflow">
+            <strong>💼 Mia - 超预期表现奖励</strong>
+        </div>
+        <ul class="usage-list">
+            <li><strong>爆款作品奖（梯度奖励）：</strong></li>
+            <li>→ 100+ 点赞/分享：¥200</li>
+            <li>→ 300+ 点赞/分享：¥500</li>
+            <li>→ 500+ 点赞/分享：¥800</li>
+        </ul>
+        <ul class="usage-list">
+            <li><strong>视频传播王（梯度奖励）：</strong></li>
+            <li>→ 2万播放量：¥300</li>
+            <li>→ 5万播放量：¥600</li>
+            <li>→ 10万播放量：¥1000</li>
+        </ul>
+        
+        <div class="workflow">
+            <strong>📸 Jay - 超预期表现奖励</strong>
+        </div>
+        <ul class="usage-list">
+            <li><strong>视频素材贡献奖（梯度奖励）：</strong></li>
+            <li>→ 拍摄素材被用于2万播放视频：¥150</li>
+            <li>→ 拍摄素材被用于5万播放视频：¥300</li>
+            <li>→ 拍摄素材被用于10万播放视频：¥500</li>
+        </ul>
+        <ul class="usage-list">
+            <li><strong>社媒达人：</strong>单条内容获得超过300互动量 → ¥300</li>
+            <li><strong>技术突破奖：</strong>small-laser.com网站提前上线且用户体验优秀 → ¥800</li>
+        </ul>
+
+        
+    </div>
+</body>
+</html> 
