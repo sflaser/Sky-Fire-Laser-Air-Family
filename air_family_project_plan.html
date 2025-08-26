@@ -123,6 +123,56 @@
             padding: 20px;
             margin: 20px 0;
         }
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+        .task-item:hover {
+            background: #f0f0f0;
+        }
+        .task-item.completed {
+            background: #f0f8f0;
+            opacity: 0.8;
+        }
+        .task-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #ff8c00;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+            transition: all 0.3s ease;
+        }
+        .task-checkbox:hover {
+            background: #fff3e0;
+        }
+        .task-checkbox.checked {
+            background: #4CAF50;
+            border-color: #4CAF50;
+        }
+        .task-checkbox.checked::after {
+            content: "✓";
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .task-content {
+            flex: 1;
+        }
+        .task-content.completed {
+            text-decoration: line-through;
+            color: #888;
+        }
         .highlight-box h3 {
             color: #ff8c00;
             margin: 0 0 15px 0;
@@ -247,61 +297,113 @@
         <div class="team-grid">
             <div class="team-member">
                 <h4>👨‍💻 Jay</h4>
-                <ul style="margin: 0; padding-left: 20px;">
-                    <li>技术对接与框架搭建</li>
-                    <li>网站模板选择与开发</li>
-                    <li>视频素材整理与拍摄</li>
-                    <li>Workshop技术支持</li>
-                    <li>技术文档编写（与Wendy协作）</li>
-                </ul>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">技术对接与框架搭建</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">网站模板选择与开发</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">视频素材整理与拍摄</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">Workshop技术支持</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">技术文档编写（与Wendy协作）</div>
+                </div>
             </div>
             
             <div class="team-member">
                 <h4>🎨 Mia</h4>
-                <ul style="margin: 0; padding-left: 20px;">
-                    <li>网站美学整体把控</li>
-                    <li>图片设计与处理</li>
-                    <li>视频剪辑与后期制作</li>
-                    <li>视觉内容创意策划</li>
-                    <li>品牌视觉一致性维护</li>
-                </ul>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">网站美学整体把控</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">图片设计与处理</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">视频剪辑与后期制作</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">视觉内容创意策划</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">品牌视觉一致性维护</div>
+                </div>
             </div>
             
             <div class="team-member">
                 <h4>🌐 Wendy</h4>
-                <ul style="margin: 0; padding-left: 20px;">
-                    <li>网站产品内容上传</li>
-                    <li>与Jay协同完成网站设计排版</li>
-                    <li>页面美化与优化</li>
-                    <li>用户体验改进</li>
-                    <li>技术文档编写（与Jay协作）</li>
-                </ul>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">网站产品内容上传</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">与Jay协同完成网站设计排版</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">页面美化与优化</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">用户体验改进</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">技术文档编写（与Jay协作）</div>
+                </div>
             </div>
             
             <div class="team-member">
                 <h4>👔 晓东</h4>
-                <ul style="margin: 0; padding-left: 20px;">
-                    <li>整体项目审核把控</li>
-                    <li>最终质量确认</li>
-                    <li>战略方向指导</li>
-                    <li>关键决策制定</li>
-                    <li>团队协调统筹</li>
-                </ul>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">整体项目审核把控</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">最终质量确认</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">战略方向指导</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">关键决策制定</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">团队协调统筹</div>
+                </div>
             </div>
         </div>
 
         <h3 style="color: #ff8c00; margin: 30px 0 20px 0;">2. 网站开发规范</h3>
         <div class="highlight-box">
             <h3>🎯 模板参考</h3>
-            <p><strong>参考网站：</strong><a href="https://www.xtool.com/" target="_blank" style="color: #ff8c00; text-decoration: none;">https://www.xtool.com/</a></p>
-            <p><strong>模板选择：</strong>使用xTool网站中摩托车商品的模板设计风格</p>
+            <p><strong>内容参考：</strong><a href="https://www.xtool.com/" target="_blank" style="color: #ff8c00; text-decoration: none;">https://www.xtool.com/</a> - 参考xTool网站的内容结构和信息组织方式</p>
+            <p><strong>网站模板：</strong>选择Honey模板（摩托车那个产品页面的模板风格）</p>
             <p><strong>设计理念：</strong>专业、现代、用户友好的产品展示页面</p>
         </div>
         
         <ul class="checklist">
             <li><strong>每个产品3份核心资料</strong> - 参照FlyingFit模式，确保内容完整性</li>
             <li><strong>配套视频素材</strong> - 产品演示、应用案例、操作指南（Jay拍摄，Mia剪辑）</li>
-            <li><strong>参考xTool摩托车模板</strong> - 专业产品展示布局，优秀的用户体验设计</li>
+            <li><strong>使用Honey模板</strong> - 基于xTool网站内容结构的专业产品展示布局</li>
             <li><strong>视觉效果要求</strong> - 精美、直观、专业的呈现效果（Mia美学把控）</li>
             <li><strong>技术实现标准</strong> - 响应式设计，快速加载，SEO优化（Jay技术实现）</li>
         </ul>
@@ -337,49 +439,79 @@
         
         <div class="timeline">
             <div class="timeline-item">
-                <div class="action-item">整理CutAir的三份资料 + 视频（最高优先级）</div>
-                <p><strong>负责人：</strong>Mia（资料）+ Jay（视频）<br>
-                <strong>时间要求：</strong>1周内完成<br>
-                <strong>交付标准：</strong>产品规格书、用户手册、技术文档 + 演示视频</p>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">
+                        <div class="action-item">整理CutAir的三份资料 + 视频（最高优先级）</div>
+                        <p><strong>负责人：</strong>Mia（资料）+ Jay（视频）<br>
+                        <strong>时间要求：</strong>1周内完成<br>
+                        <strong>交付标准：</strong>产品规格书、用户手册、技术文档 + 演示视频</p>
+                    </div>
+                </div>
             </div>
             
             <div class="timeline-item">
-                <div class="action-item">完成Air Family网站框架设计（Jay+Wendy协作）</div>
-                <p><strong>负责人：</strong>Jay（技术框架）+ Wendy（设计排版）<br>
-                <strong>参考模板：</strong>xTool网站摩托车商品页面<br>
-                <strong>协作：</strong>Mia（美学把控）+ 晓东（审核）<br>
-                <strong>交付标准：</strong>基于xTool模板的网站原型、技术架构、设计规范</p>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">
+                        <div class="action-item">完成Air Family网站框架设计（Jay+Wendy协作）</div>
+                        <p><strong>负责人：</strong>Jay（技术框架）+ Wendy（设计排版）<br>
+                        <strong>参考模板：</strong>xTool网站摩托车商品页面<br>
+                        <strong>协作：</strong>Mia（美学把控）+ 晓东（审核）<br>
+                        <strong>交付标准：</strong>基于xTool模板的网站原型、技术架构、设计规范</p>
+                    </div>
+                </div>
             </div>
             
             <div class="timeline-item">
-                <div class="action-item">Mia完成视觉内容制作（图片设计+视频剪辑）</div>
-                <p><strong>负责人：</strong>Mia<br>
-                <strong>内容范围：</strong>产品图片设计、Jay拍摄视频的剪辑后期、视觉素材创作<br>
-                <strong>质量要求：</strong>美学统一、品牌一致、专业精美<br>
-                <strong>协作：</strong>与Jay配合完成视频素材链条</p>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">
+                        <div class="action-item">Mia完成视觉内容制作（图片设计+视频剪辑）</div>
+                        <p><strong>负责人：</strong>Mia<br>
+                        <strong>内容范围：</strong>产品图片设计、Jay拍摄视频的剪辑后期、视觉素材创作<br>
+                        <strong>质量要求：</strong>美学统一、品牌一致、专业精美<br>
+                        <strong>协作：</strong>与Jay配合完成视频素材链条</p>
+                    </div>
+                </div>
             </div>
             
             <div class="timeline-item">
-                <div class="action-item">Jay准备Workshop技术设备（网卡、直播工具）</div>
-                <p><strong>负责人：</strong>Jay<br>
-                <strong>设备清单：</strong>高速网卡、直播软件、录制设备<br>
-                <strong>测试要求：</strong>确保直播稳定性和画质</p>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">
+                        <div class="action-item">Jay准备Workshop技术设备（网卡、直播工具）</div>
+                        <p><strong>负责人：</strong>Jay<br>
+                        <strong>设备清单：</strong>高速网卡、直播软件、录制设备<br>
+                        <strong>测试要求：</strong>确保直播稳定性和画质</p>
+                    </div>
+                </div>
             </div>
             
             <div class="timeline-item">
-                <div class="action-item">Wendy完成网站内容上传+页面优化</div>
-                <p><strong>负责人：</strong>Wendy<br>
-                <strong>工作内容：</strong>产品信息上传、页面美化、用户体验优化<br>
-                <strong>协作：</strong>与Jay协同完成最终网站调试<br>
-                <strong>质量把控：</strong>晓东最终审核确认</p>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">
+                        <div class="action-item">Wendy完成网站内容上传+页面优化</div>
+                        <p><strong>负责人：</strong>Wendy<br>
+                        <strong>工作内容：</strong>产品信息上传、页面美化、用户体验优化<br>
+                        <strong>协作：</strong>与Jay协同完成最终网站调试<br>
+                        <strong>质量把控：</strong>晓东最终审核确认</p>
+                    </div>
+                </div>
             </div>
             
             <div class="timeline-item">
-                <div class="action-item">全体确定第一次Workshop时间 & 直播主题</div>
-                <p><strong>负责人：</strong>全体团队<br>
-                <strong>议题：</strong>时间安排、主题选择、分工确认<br>
-                <strong>输出：</strong>Workshop计划表、主题大纲、责任分工<br>
-                <strong>最终审核：</strong>晓东统筹协调</p>
+                <div class="task-item">
+                    <div class="task-checkbox" onclick="toggleTask(this)"></div>
+                    <div class="task-content">
+                        <div class="action-item">全体确定第一次Workshop时间 & 直播主题</div>
+                        <p><strong>负责人：</strong>全体团队<br>
+                        <strong>议题：</strong>时间安排、主题选择、分工确认<br>
+                        <strong>输出：</strong>Workshop计划表、主题大纲、责任分工<br>
+                        <strong>最终审核：</strong>晓东统筹协调</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -405,5 +537,52 @@
     <div class="section" style="margin-top: 40px; font-size: 12px; color: #888; text-align: center;">
         <p><strong>文档创建时间：</strong>2025年1月 | <strong>更新周期：</strong>每周review | <strong>责任部门：</strong>Air Family项目组</p>
     </div>
+
+    <script>
+        function toggleTask(checkbox) {
+            checkbox.classList.toggle('checked');
+            const taskItem = checkbox.closest('.task-item');
+            const taskContent = taskItem.querySelector('.task-content');
+            
+            if (checkbox.classList.contains('checked')) {
+                taskItem.classList.add('completed');
+                taskContent.classList.add('completed');
+            } else {
+                taskItem.classList.remove('completed');
+                taskContent.classList.remove('completed');
+            }
+            
+            saveProgress();
+        }
+
+        function saveProgress() {
+            const taskStates = {};
+            document.querySelectorAll('.task-item').forEach((task, index) => {
+                const checkbox = task.querySelector('.task-checkbox');
+                const isCompleted = checkbox && checkbox.classList.contains('checked');
+                taskStates[index] = isCompleted;
+            });
+            localStorage.setItem('airFamilyProjectProgress', JSON.stringify(taskStates));
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem('airFamilyProjectProgress');
+            if (saved) {
+                const taskStates = JSON.parse(saved);
+                document.querySelectorAll('.task-item').forEach((task, index) => {
+                    const checkbox = task.querySelector('.task-checkbox');
+                    const taskContent = task.querySelector('.task-content');
+                    if (checkbox && taskStates[index]) {
+                        checkbox.classList.add('checked');
+                        task.classList.add('completed');
+                        taskContent.classList.add('completed');
+                    }
+                });
+            }
+        }
+
+        // 页面加载时恢复进度
+        document.addEventListener('DOMContentLoaded', loadProgress);
+    </script>
 </body>
 </html>
