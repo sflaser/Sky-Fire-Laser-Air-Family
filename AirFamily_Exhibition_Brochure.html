@@ -306,6 +306,44 @@
             font-weight: bold;
             font-size: 1.2rem;
         }
+        /* Bilingual Styles */
+        .bilingual-text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .english-text {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        .chinese-text {
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        .bilingual-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .bilingual-title .english-text {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        .bilingual-title .chinese-text {
+            font-size: 1em;
+        }
+        .bilingual-highlight {
+            margin-bottom: 15px;
+        }
+        .bilingual-highlight .english-text {
+            color: #ff8c00;
+            font-weight: bold;
+        }
+        .bilingual-highlight .chinese-text {
+            color: #ff8c00;
+            opacity: 0.8;
+        }
+        
         @media (max-width: 768px) {
             .page {
                 padding: 20px;
@@ -327,22 +365,44 @@
 </head>
 <body>
     <div class="brochure">
-        <!-- Page 1: Cover -->
+        <!-- Page 1: Cover / 第1页：封面 -->
         <div class="page active" id="page1">
             <div class="header">
                 <div class="logo"><span class="brand-name">Sky Fire Laser</span></div>
-                <div class="slogan">Born To Be The Focus</div>
-                <h1>Air Family Laser Workshop Solutions</h1>
-                <p class="brand-highlight">Professional Laser Solutions for Makers, Home Workshops & Small Businesses</p>
+                <div class="slogan">
+                    <div class="bilingual-text">
+                        <div class="english-text">Born To Be The Focus</div>
+                        <div class="chinese-text">天生就是焦点</div>
+                    </div>
+                </div>
+                <h1>
+                    <div class="bilingual-text">
+                        <div class="english-text">Air Family Laser Workshop Solutions</div>
+                        <div class="chinese-text">Air Family 激光工坊解决方案</div>
+                    </div>
+                </h1>
+                <div class="bilingual-highlight">
+                    <div class="english-text">Professional Laser Solutions for Makers, Home Workshops & Small Businesses</div>
+                    <div class="chinese-text">为创客、家庭工坊和小型企业提供的专业激光解决方案</div>
+                </div>
             </div>
             <div style="text-align: center; margin: 50px 0;">
                 <div class="workshop-highlight">
-                    <h2 style="color: white; margin: 0 0 15px 0;">Redefining Your Creative Space</h2>
-                    <p style="font-size: 1.2rem; margin: 0;">Complete Air-Cooled Laser Application Solutions</p>
+                    <div class="bilingual-text" style="color: white;">
+                        <div class="english-text" style="color: white; margin: 0 0 10px 0; font-size: 1.8rem;">Redefining Your Creative Space</div>
+                        <div class="chinese-text" style="color: rgba(255,255,255,0.9); font-size: 1.4rem;">重新定义您的创意空间</div>
+                    </div>
+                    <div class="bilingual-text" style="color: white; margin-top: 15px;">
+                        <div class="english-text" style="color: white; font-size: 1.2rem;">Complete Air-Cooled Laser Application Solutions</div>
+                        <div class="chinese-text" style="color: rgba(255,255,255,0.8); font-size: 1rem;">完整的风冷激光应用解决方案</div>
+                    </div>
                 </div>
-                <!-- Workshop Design Showcase -->
+                <!-- Workshop Design Showcase / 工坊设计展示 -->
                 <div class="workshop-showcase">
-                    <h3 style="color: #2c3e50; margin-bottom: 20px; font-size: 1.8rem;">Complete Workshop Solution</h3>
+                    <div class="bilingual-title">
+                        <div class="english-text" style="color: #2c3e50; font-size: 1.8rem;">Complete Workshop Solution</div>
+                        <div class="chinese-text" style="color: #666; font-size: 1.4rem;">完整工坊解决方案</div>
+                    </div>
                     <div class="workshop-image-container">
                         <img src="#" alt="Air Family Workshop Design" class="workshop-design-image" style="
                             width: 100%; 
@@ -362,55 +422,112 @@
                         <div class="workshop-placeholder" style="text-align: center; color: #ff8c00; font-size: 1.2rem; font-weight: 600;">
                         </div>
                     </div>
-                    <p style="color: #666; font-size: 1rem; max-width: 600px; margin: 0 auto;">
-                        Experience our complete workshop ecosystem featuring CutAir, WeldAir, MarkAir, and supporting equipment in a professionally designed creative space.
-                    </p>
+                    <div class="bilingual-text" style="max-width: 600px; margin: 0 auto;">
+                        <div class="english-text" style="color: #666; font-size: 1rem;">Experience our complete workshop ecosystem featuring CutAir, WeldAir, MarkAir, and supporting equipment in a professionally designed creative space.</div>
+                        <div class="chinese-text" style="color: #999; font-size: 0.9rem;">体验我们完整的工坊生态系统，包含CutAir、WeldAir、MarkAir和配套设备，打造专业设计的创意空间。</div>
+                    </div>
                 </div>
-                <a href="#" class="btn">Explore Solutions</a>
+                <a href="#" class="btn">
+                    <div class="bilingual-text">
+                        <div class="english-text">Explore Solutions</div>
+                        <div class="chinese-text">探索解决方案</div>
+                    </div>
+                </a>
             </div>
             <div class="footer">
-                <p class="brand-highlight">Bringing Chinese Laser Application Knowledge to the World</p>
+                <div class="bilingual-text">
+                    <div class="english-text" style="color: #ff8c00;">Bringing Chinese Laser Application Knowledge to the World</div>
+                    <div class="chinese-text" style="color: #ff8c00; opacity: 0.8;">让中国的激光应用知识惠及世界</div>
+                </div>
             </div>
         </div>
 
-        <!-- Page 2: Company Vision & Values -->
+        <!-- Page 2: Company Vision & Values / 第2页：企业愿景与价值观 -->
         <div class="page" id="page2">
             <div class="header">
-                <h1>Our Vision & Values</h1>
+                <div class="bilingual-title">
+                    <div class="english-text" style="font-size: 2.5rem; color: #2c3e50;">Our Vision & Values</div>
+                    <div class="chinese-text" style="font-size: 2rem; color: #666;">我们的愿景与价值观</div>
+                </div>
             </div>
             
             <div class="quote">
-                "Continuously Breaking Boundaries in Laser Application Knowledge Dissemination"
+                <div class="bilingual-text">
+                    <div class="english-text" style="color: #ff8c00; font-style: italic; font-size: 1.3rem;">"Continuously Breaking Boundaries in Laser Application Knowledge Dissemination"</div>
+                    <div class="chinese-text" style="color: #ff8c00; opacity: 0.8; font-style: italic;">"不断突破激光应用知识的传播边界"</div>
+                </div>
             </div>
             
-            <h2>Our Mission</h2>
-            <p>We are committed to making laser technology <span class="highlight">accessible and user-friendly</span>, providing comprehensive laser application solutions for global makers, DIY enthusiasts, and small to medium enterprises.</p>
+            <div class="bilingual-title">
+                <div class="english-text" style="color: #ff8c00; font-size: 1.8rem;">Our Mission</div>
+                <div class="chinese-text" style="color: #666; font-size: 1.4rem;">我们的使命</div>
+            </div>
+            <div class="bilingual-text">
+                <div class="english-text">We are committed to making laser technology <span class="highlight">accessible and user-friendly</span>, providing comprehensive laser application solutions for global makers, DIY enthusiasts, and small to medium enterprises.</div>
+                <div class="chinese-text">我们致力于让激光技术变得<span style="color: #ff8c00; font-weight: bold;">易于使用且易于获得</span>，为全球创客、DIY爱好者和中小企业提供一站式激光应用解决方案。</div>
+            </div>
             
-            <h2>Our Vision</h2>
-            <p>To share Chinese laser application expertise globally, empowering everyone to turn creativity into reality.</p>
+            <div class="bilingual-title" style="margin-top: 30px;">
+                <div class="english-text" style="color: #ff8c00; font-size: 1.8rem;">Our Vision</div>
+                <div class="chinese-text" style="color: #666; font-size: 1.4rem;">我们的愿景</div>
+            </div>
+            <div class="bilingual-text">
+                <div class="english-text">To share Chinese laser application expertise globally, empowering everyone to turn creativity into reality.</div>
+                <div class="chinese-text">让中国的激光应用知识惠及世界，让每个人都能将创意转化为现实。</div>
+            </div>
             
-            <h2>Core Values</h2>
+            <div class="bilingual-title" style="margin-top: 30px;">
+                <div class="english-text" style="color: #ff8c00; font-size: 1.8rem;">Core Values</div>
+                <div class="chinese-text" style="color: #666; font-size: 1.4rem;">核心价值观</div>
+            </div>
             <div class="values-container">
                 <div class="value-item">
-                    <h3>Sincerity</h3>
-                    <p>Building lasting trust relationships with genuine care for every customer</p>
+                    <div class="bilingual-title">
+                        <div class="english-text" style="color: #2c3e50; font-size: 1.4rem;">Sincerity</div>
+                        <div class="chinese-text" style="color: #666; font-size: 1.1rem;">真诚</div>
+                    </div>
+                    <div class="bilingual-text">
+                        <div class="english-text" style="font-size: 0.95rem;">Building lasting trust relationships with genuine care for every customer</div>
+                        <div class="chinese-text" style="font-size: 0.85rem;">以真诚的态度对待每一位客户，建立长久的信任关系</div>
+                    </div>
                 </div>
                 <div class="value-item">
-                    <h3>Focus</h3>
-                    <p>Dedicated to laser application innovation and popularization with professional excellence</p>
+                    <div class="bilingual-title">
+                        <div class="english-text" style="color: #2c3e50; font-size: 1.4rem;">Focus</div>
+                        <div class="chinese-text" style="color: #666; font-size: 1.1rem;">专注</div>
+                    </div>
+                    <div class="bilingual-text">
+                        <div class="english-text" style="font-size: 0.95rem;">Dedicated to laser application innovation and popularization with professional excellence</div>
+                        <div class="chinese-text" style="font-size: 0.85rem;">专注于激光应用技术的创新与普及，做到专业极致</div>
+                    </div>
                 </div>
                 <div class="value-item">
-                    <h3>Integrity</h3>
-                    <p>Maintaining business ethics, doing what's right rather than what's easy</p>
+                    <div class="bilingual-title">
+                        <div class="english-text" style="color: #2c3e50; font-size: 1.4rem;">Integrity</div>
+                        <div class="chinese-text" style="color: #666; font-size: 1.1rem;">正直</div>
+                    </div>
+                    <div class="bilingual-text">
+                        <div class="english-text" style="font-size: 0.95rem;">Maintaining business ethics, doing what's right rather than what's easy</div>
+                        <div class="chinese-text" style="font-size: 0.85rem;">坚持商业道德，做正确而非容易的事情</div>
+                    </div>
                 </div>
                 <div class="value-item">
-                    <h3>Courage</h3>
-                    <p>Fearlessly innovating, pushing technological boundaries, and challenging impossibilities</p>
+                    <div class="bilingual-title">
+                        <div class="english-text" style="color: #2c3e50; font-size: 1.4rem;">Courage</div>
+                        <div class="chinese-text" style="color: #666; font-size: 1.1rem;">勇敢</div>
+                    </div>
+                    <div class="bilingual-text">
+                        <div class="english-text" style="font-size: 0.95rem;">Fearlessly innovating, pushing technological boundaries, and challenging impossibilities</div>
+                        <div class="chinese-text" style="font-size: 0.85rem;">勇于创新，敢于突破技术边界，挑战不可能</div>
+                    </div>
                 </div>
             </div>
             
             <div class="footer">
-                <p class="brand-highlight">Born To Be The Focus - Your Creativity, Our Dedication</p>
+                <div class="bilingual-text">
+                    <div class="english-text" style="color: #ff8c00;">Born To Be The Focus - Your Creativity, Our Dedication</div>
+                    <div class="chinese-text" style="color: #ff8c00; opacity: 0.8;">天生就是焦点 - 您的创意，我们的专注</div>
+                </div>
             </div>
         </div>
 
