@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Fire Laser Air Family - Born To Be The Focus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff8c00 0%, #ff6b00 100%);
+            color: white;
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .brand-name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            border-left: 3px solid #ff8c00;
+            padding-left: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #ff8c00;
+            display: block;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+        
+        /* Equipment Showcase */
+        .equipment-section {
+            padding: 80px 60px;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ff8c00;
+            margin-bottom: 60px;
+            font-weight: 600;
+        }
+        
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .equipment-card {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .equipment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff8c00, #ff6b00);
+        }
+        
+        .equipment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(255,140,0,0.15);
+            border-color: #ff8c00;
+        }
+        
+        .equipment-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff8c00, #ff6b00);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .equipment-name {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .equipment-type {
+            color: #ff8c00;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .equipment-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .equipment-features li {
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+        
+        .equipment-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .equipment-features li::before {
+            content: '✓';
+            color: #ff8c00;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 60px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            border-top: 4px solid #ff8c00;
+        }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff8c00, #ff6b00);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .benefit-title {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .benefit-text {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            background: #2c3e50;
+            color: white;
+            padding: 80px 60px;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ff8c00, #ff6b00);
+            color: white;
+            box-shadow: 0 6px 20px rgba(255,140,0,0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,140,0,0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid #ff8c00;
+        }
+        
+        .btn-secondary:hover {
+            background: #ff8c00;
+            transform: translateY(-2px);
+        }
+        
+        /* Contact Info */
+        .contact-bar {
+            background: #1a1a1a;
+            color: white;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-icon {
+            color: #ff8c00;
+            font-size: 1.2rem;
+        }
+        
+        .contact-text {
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero, .equipment-section, .benefits-section, .cta-section {
+                padding: 50px 30px;
+            }
+            
+            .stats-bar, .contact-bar {
+                padding: 30px 30px;
+            }
+            
+            .brand-name {
+                font-size: 2.5rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .equipment-grid, .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="brand-name">Sky Fire Laser</div>
+                <div class="tagline">Born To Be The Focus</div>
+                <h1 class="hero-title">Air Family Laser Solutions</h1>
+                <p class="hero-subtitle">Complete air-cooled laser workshop ecosystem for makers, professionals & small businesses</p>
+            </div>
+        </section>
+        
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <div class="stat-label">Core Products</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <div class="stat-label">Air-Cooled</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">0</span>
+                <div class="stat-label">Water Required</div>
+            </div>
+        </section>
+        
+        <!-- Equipment Showcase -->
+        <section class="equipment-section">
+            <h2 class="section-title">Air Family Equipment</h2>
+            <p class="section-subtitle">Plug & Play • No Water Source Required • Professional Results</p>
+            
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-icon">C</div>
+                    <h3 class="equipment-name">CutAir</h3>
+                    <p class="equipment-type">Fiber Laser Cutting</p>
+                    <ul class="equipment-features">
+                        <li>Stainless Steel 3mm</li>
+                        <li>Compact Desktop Size</li>
+                        <li>Air-Cooled Technology</li>
+                        <li>Professional Precision</li>
+                    </ul>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-icon">W</div>
+                    <h3 class="equipment-name">WeldAir</h3>
+                    <p class="equipment-type">Handheld Laser Welding</p>
+                    <ul class="equipment-features">
+                        <li>2mm Welding Depth</li>
+                        <li>Flexible Operation</li>
+                        <li>No Experience Required</li>
+                        <li>Complex Curves</li>
+                    </ul>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-icon">M</div>
+                    <h3 class="equipment-name">MarkAir</h3>
+                    <p class="equipment-type">Laser Marking System</p>
+                    <ul class="equipment-features">
+                        <li>0.1mm Precision</li>
+                        <li>Multi-Material Support</li>
+                        <li>High-Speed Processing</li>
+                        <li>Easy Software Control</li>
+                    </ul>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-icon">+</div>
+                    <h3 class="equipment-name">Coming Soon</h3>
+                    <p class="equipment-type">EngraveAir & PrintAir</p>
+                    <ul class="equipment-features">
+                        <li>Enhanced Precision</li>
+                        <li>Extended Materials</li>
+                        <li>3D Printing Solutions</li>
+                        <li>Air Family Ecosystem</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <h2 class="section-title">Why Choose Air Family</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💧</div>
+                    <h3 class="benefit-title">No Water Required</h3>
+                    <p class="benefit-text">Air-cooled technology eliminates water supply needs and maintenance complexity</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔌</div>
+                    <h3 class="benefit-title">Plug & Play</h3>
+                    <p class="benefit-text">Simple setup and operation - from unboxing to production in minutes</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏠</div>
+                    <h3 class="benefit-title">Compact Design</h3>
+                    <p class="benefit-text">Perfect for home workshops, studios, and small business spaces</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛠️</div>
+                    <h3 class="benefit-title">Complete Ecosystem</h3>
+                    <p class="benefit-text">Full workshop solutions from equipment to training and support</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3 class="benefit-title">Professional Results</h3>
+                    <p class="benefit-text">Commercial-grade performance in desktop-friendly packages</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎓</div>
+                    <h3 class="benefit-title">Easy Learning</h3>
+                    <p class="benefit-text">Comprehensive training and user-friendly software interface</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2 class="cta-title">Ready to Start Your Laser Journey?</h2>
+            <p class="cta-subtitle">Visit our booth for live demonstrations and exclusive exhibition offers</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Schedule Demo</a>
+                <a href="#" class="btn btn-secondary">Download Catalog</a>
+            </div>
+        </section>
+        
+        <!-- Contact Bar -->
+        <section class="contact-bar">
+            <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <span class="contact-text">info@skyfirelaserusa.com</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">🌐</span>
+                <span class="contact-text">www.skyfirelaserusa.com</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <span class="contact-text">+1-XXX-XXX-XXXX</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
